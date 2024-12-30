@@ -1,9 +1,9 @@
-NAME		:= megaphone
+NAME		:= phonebook
 CC			:= c++
 FLAGS		:= -Wall -Wextra -Werror -std=c++98
 
 
-SRCS		:= megaphone.cpp
+SRCS		:= Contact.cpp main.cpp PhoneBook.cpp
 OBJS_DIR	:= objs
 OBJS		:= $(addprefix $(OBJS_DIR)/, $(SRCS:.cpp=.o))
 
