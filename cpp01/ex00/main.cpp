@@ -1,4 +1,4 @@
-#include <string.h>
+#include <string>
 #include "Zombie.hpp"
 
 Zombie* newZombie( std::string name )
