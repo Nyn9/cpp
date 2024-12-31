@@ -19,4 +19,5 @@ int main()
 	tony->announce();
 	randomChump("Many");
 	delete tony;
+	return 0;
 }
