@@ -1,9 +1,9 @@
-NAME		:= violence
+NAME		:= replace
 CC			:= c++
 FLAGS		:= -Wall -Wextra -Werror -std=c++98 -I./includes
 
 SRCS_DIR	:= srcs/
-SRCS_FILE	:= main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRCS_FILE	:= main.cpp
 SRCS		:= $(addprefix $(SRCS_DIR), $(SRCS_FILE))
 
 OBJS_DIR	:= objs/
