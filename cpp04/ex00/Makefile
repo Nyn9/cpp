@@ -1,9 +1,9 @@
-NAME		:= diamondtrap
+NAME		:= animal
 CC			:= c++
 FLAGS		:= -Wall -Wextra -Werror -std=c++98 -I./includes
 
 SRCS_DIR	:= srcs/
-SRCS_FILE	:= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
+SRCS_FILE	:= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 SRCS		:= $(addprefix $(SRCS_DIR), $(SRCS_FILE))
 
 OBJS_DIR	:= objs/
