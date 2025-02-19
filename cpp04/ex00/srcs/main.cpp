@@ -9,14 +9,17 @@ int main()
 {
 	WrongAnimal	*unknown = new WrongAnimal();
 	Dog	*dog = new Dog();
+	const Animal *i = new Dog();
 	Cat	cat;
 
-	std::cout << std::endl << unknown->getType() << " " << std::endl;
-	std::cout << dog->getType() << " " << std::endl;
-	std::cout << cat.getType() << " " << std::endl << std::endl;
+	std::cout << std::endl << unknown->getType() << std::endl;
+	std::cout << dog->getType() << std::endl;
+	std::cout << i->getType() << std::endl;
+	std::cout << cat.getType() << std::endl << std::endl;
 
 	unknown->makeSound();
 	dog->makeSound();
+	i->makeSound();
 	cat.makeSound();
 
 	std::cout << std::endl;
@@ -28,5 +31,6 @@ int main()
 	std::cout << std::endl;
 
 	delete dog;
+	delete i;
 	delete unknown;
 }

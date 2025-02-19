@@ -2,6 +2,7 @@
 #define CAT_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal
 {
@@ -12,7 +13,7 @@ class Cat : public Animal
         Cat &operator=(Cat const &src);
 
     protected:
-
+		Brain *m_brain;
 };
 
 #endif
