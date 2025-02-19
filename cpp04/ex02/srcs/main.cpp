@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
@@ -13,7 +13,7 @@ int main()
 	Dog	*dog = new Dog();
 	std::cout << std::endl;
 
-	const Animal *i = new Dog();
+	const AAnimal *i = new Dog();
 	std::cout << std::endl;
 
 	Cat	cat;
