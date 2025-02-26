@@ -1,13 +1,15 @@
 NAME		:= zombie
 CC			:= c++
-FLAGS		:= -Wall -Wextra -Werror -std=c++98
+FLAGS		:= -Wall -Wextra -Werror -std=c++98 -I./includes
 
+SRCS_DIR	:= srcs/
+SRCS_FILE	:= main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRCS		:= $(addprefix $(SRCS_DIR), $(SRCS_FILE))
 
-SRCS		:= main.cpp Zombie.cpp
 OBJS_DIR	:= objs/
-OBJS		:= $(addprefix $(OBJS_DIR), $(SRCS:.cpp=.o))
+OBJS		:= $(addprefix $(OBJS_DIR), $(notdir $(SRCS:.cpp=.o)))
 
-$(OBJS_DIR)%.o: %.cpp
+$(OBJS_DIR)%.o: $(SRCS_DIR)%.cpp
 	@mkdir -p $(OBJS_DIR)
 	@ $(CC) $(FLAGS) -c $< -o $@
 
@@ -30,7 +32,7 @@ bonus:		all
 
 clean:
 			@ ${RM} $(OBJS_DIR)/*.o
-			@ ${RM} -r $(OBJS_DIR)
+			@ ${RM} -rf $(OBJS_DIR)
 			@ echo "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)objs ✔️"
 
 fclean:		clean

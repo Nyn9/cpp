@@ -7,8 +7,19 @@ int main(int ac, char **av)
 		return 1;
 	std::string		filename = av[1];
 	std::string		s1 = av[2];
+	if (s1.empty())
+	{
+		std::cerr << "Error: first string is empty." << std::endl;
+		return 1;
+	}
 	std::string		s2 = av[3];
 	std::ifstream	file(filename.c_str());
+	if (!file.is_open())
+	{
+		std::cerr << "Error: could not open file." << std::endl;
+		file.close();
+		return 1;
+	}
 	std::ofstream	replace(filename.append(".replace").c_str());
 	std::string		line;
 	int pos;
