@@ -1,6 +1,11 @@
 #include "AMateria.hpp"
 
-AMateria::AMateria()
+AMateria::AMateria() : m_type("NULL"), m_isequiped(0)
+{
+	std::cout << "Materia constructor Called" << std::endl;
+}
+
+AMateria::AMateria(std::string const &type) : m_type(type), m_isequiped(0)
 {
     std::cout << "Materia constructor Called" << std::endl;
 }
@@ -20,13 +25,29 @@ AMateria &AMateria::operator=(AMateria const &src)
 {
     std::cout << "Materia assignation operator Called" << std::endl;
     if (this != &src)
-    {
-        m_type = src.m_type;
-    }
+	{
+		m_type = src.m_type;
+		m_isequiped = src.m_isequiped;
+	}
     return *this;
 }
 
 std::string const &AMateria::getType() const
 {
     return m_type;
+}
+
+int AMateria::getIsEquiped() const
+{
+	return m_isequiped;
+}
+
+void AMateria::setIsEquiped(int isequiped)
+{
+	m_isequiped = isequiped;
+}
+
+void AMateria::use(ICharacter &target)
+{
+	(void)target;
 }

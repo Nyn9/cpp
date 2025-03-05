@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+#include "AMateria.hpp"
+
 class Cure : public AMateria
 {
     public:
@@ -13,8 +15,8 @@ class Cure : public AMateria
 
         Cure &operator=(Cure const &src);
 
-    protected:
-
+		virtual AMateria *clone() const;
+		virtual void use(ICharacter &target);
 };
 
 #endif 

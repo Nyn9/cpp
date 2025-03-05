@@ -10,6 +10,7 @@ class ICharacter;
 class AMateria
 {
     public:
+		AMateria();
         AMateria(std::string const &type);
         AMateria(const AMateria &cp);
 
@@ -18,12 +19,15 @@ class AMateria
         AMateria &operator=(AMateria const &src);
 
         std::string const &getType() const;
+		int getIsEquiped() const;
+		void setIsEquiped(int isequiped);
 
         virtual AMateria *clone() const = 0;
         virtual void use(ICharacter &target);
 
     protected:
-        std::string m_type; 
+        std::string m_type;
+		int m_isequiped;
 
 };
 

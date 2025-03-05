@@ -20,6 +20,7 @@ Ice::~Ice()
 Ice &Ice::operator=(Ice const &src)
 {
     std::cout << "Ice assignation operator Called" << std::endl;
+	(void)src;
     return *this;
 }
 
@@ -30,5 +31,5 @@ AMateria *Ice::clone() const
 
 void Ice::use(ICharacter &target)
 {
-    std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }

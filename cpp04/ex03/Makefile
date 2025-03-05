@@ -1,9 +1,9 @@
-NAME		:= animal
+NAME		:= materia
 CC			:= c++
 FLAGS		:= -Wall -Wextra -Werror -std=c++98 -I./includes
 
 SRCS_DIR	:= srcs/
-SRCS_FILE	:= main.cpp MateriaSource.cpp IMateriaSource.cpp Ice.cpp Cure.cpp Character.cpp AMateria.cpp ICharacter.cpp
+SRCS_FILE	:= main.cpp MateriaSource.cpp Ice.cpp Cure.cpp Character.cpp AMateria.cpp
 SRCS		:= $(addprefix $(SRCS_DIR), $(SRCS_FILE))
 
 OBJS_DIR	:= objs/

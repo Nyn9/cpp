@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+#include "AMateria.hpp"
+
 class Ice : public AMateria
 {
     public:
@@ -12,7 +14,9 @@ class Ice : public AMateria
         virtual ~Ice();
 
         Ice &operator=(Ice const &src);
-    protected:
+
+		virtual AMateria *clone() const;
+		virtual void use(ICharacter &target);
 
 };
 
