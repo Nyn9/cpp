@@ -3,21 +3,68 @@
 
 int main(void)
 {
-	try
 	{
-		Bureaucrat b1("Tony", 1);
-		Bureaucrat b2("Many", 150);
-		Bureaucrat b3("Sosa", 0);
-		Bureaucrat b4("Rebenga", 151);
+		try
+		{
+			Bureaucrat b("Mark S.", 1);
 
-		std::cout << "Name : " << b1.getName() << " Grade : " << b1.getGrade() << std::endl;
-		std::cout << "Name : " << b2.getName() << " Grade : " << b2.getGrade() << std::endl;
-		std::cout << "Name : " << b3.getName() << " Grade : " << b3.getGrade() << std::endl;
-		std::cout << "Name : " << b4.getName() << " Grade : " << b4.getGrade() << std::endl;
+			std::cout << b << std::endl;
+			b.decrementGrade();
+			std::cout << b << std::endl;
+			b.incrementGrade();
+			std::cout << b << std::endl;
+			b.incrementGrade();
+			std::cout << b << std::endl;
+		}
+		catch(const std::exception& e)
+		{
+			std::cerr << e.what() << std::endl;
+		}
 	}
-	catch(const std::exception& e)
+	std::cout << std::endl;
 	{
-		std::cerr << e.what() << '\n';
+		try
+		{
+			Bureaucrat b("Helly R.", 150);
+
+			std::cout << b << std::endl;
+			b.incrementGrade();
+			std::cout << b << std::endl;
+			b.decrementGrade();
+			std::cout << b << std::endl;
+			b.decrementGrade();
+			std::cout << b << std::endl;
+		}
+		catch(const std::exception& e)
+		{
+			std::cerr << e.what() << std::endl;
+		}
+	}
+	std::cout << std::endl;
+	{
+		try
+		{
+			Bureaucrat b("Dylan G.", 0);
+
+			std::cout << b << std::endl;
+		}
+		catch(const std::exception& e)
+		{
+			std::cerr << e.what() << std::endl;
+		}
+	}
+	std::cout << std::endl;
+	{
+		try
+		{
+			Bureaucrat b("Irving B.", 151);
+
+			std::cout << b << std::endl;
+		}
+		catch(const std::exception& e)
+		{
+			std::cerr << e.what() << std::endl;
+		}
 	}
 	return 0;
 }
