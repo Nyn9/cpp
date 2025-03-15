@@ -1,13 +1,13 @@
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm() : AForm("robotomy request", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm() : AForm("default", 72, 45)
 {
-	m_target = "default";
+
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target) : AForm("robotomy request", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : AForm(target, 72, 45)
 {
-	m_target = target;
+
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &cp) : AForm(cp)
@@ -27,13 +27,18 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm const &s
 	return *this;
 }
 
+void RobotomyRequestForm::setTarget(std::string target)
+{
+	m_target = target;
+}
+
 void RobotomyRequestForm::execute(Bureaucrat const &executor) const
 {
 	AForm::execute(executor);
 	std::cout << "*drilling noises* ";
 	srand(time(NULL));
 	if (rand() % 2)
-		std::cout << m_target << " has been robotomized successfully" << std::endl;
+		std::cout << getName() << " has been robotomized successfully" << std::endl;
 	else
-		std::cout << m_target << " couldn't be robotomized" << std::endl;
+		std::cout << getName() << " couldn't be robotomized" << std::endl;
 }

@@ -28,7 +28,7 @@ int main(void)
 		try
 		{
 			Bureaucrat b("Helly R.", 1);
-			RobotomyRequestForm f("Robot");
+			RobotomyRequestForm f("Bender");
 
 			std::cout << f << std::endl;
 			b.signForm(f);
@@ -61,11 +61,9 @@ int main(void)
 	{
 		try
 		{
-			Bureaucrat b("Irving B.", 150);
+			Bureaucrat b("Irving B.", 1);
 			PresidentialPardonForm f("President");
 
-			std::cout << f << std::endl;
-			b.signForm(f);
 			std::cout << f << std::endl;
 			b.executeForm(f);
 			std::cout << f << std::endl;

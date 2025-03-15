@@ -18,6 +18,8 @@ class ShrubberyCreationForm : public AForm
 
         ShrubberyCreationForm &operator=(ShrubberyCreationForm const &src);
 
+		void setTarget(std::string target);
+
 		void execute(Bureaucrat const &executor) const;
 	private:
 		std::string m_target;
