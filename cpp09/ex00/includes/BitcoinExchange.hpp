@@ -1,14 +1,14 @@
 #pragma once
 
-# include <iostream>
-# include <fstream>
-# include <string>
-# include <cstring>
-# include <cstdlib>
-# include <map>
-# include <ctime>
-# include <sstream>
-# include <utility>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <cstring>
+#include <cstdlib>
+#include <map>
+#include <ctime>
+#include <sstream>
+#include <utility>
 
 class BitcoinExchange
 {
