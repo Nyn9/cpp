@@ -1,6 +1,7 @@
 #ifndef DOG_HPP
 #define DOG_HPP
 
+#include <iostream>
 #include "AAnimal.hpp"
 #include "Brain.hpp"
 
@@ -14,11 +15,10 @@ class Dog : public AAnimal
 
         Dog &operator=(Dog const &src);
 
-		void makeSound() const;
+        void makeSound() const;
 
     protected:
 		Brain *m_brain;
-
 };
 
 #endif

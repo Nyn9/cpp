@@ -1,6 +1,7 @@
 #ifndef CAT_HPP
 #define CAT_HPP
 
+#include <iostream>
 #include "AAnimal.hpp"
 #include "Brain.hpp"
 
@@ -14,7 +15,7 @@ class Cat : public AAnimal
 
         Cat &operator=(Cat const &src);
 
-		void makeSound() const;
+        void makeSound() const;
 
     protected:
 		Brain *m_brain;

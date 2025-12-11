@@ -20,7 +20,8 @@ Cure::~Cure()
 Cure &Cure::operator=(Cure const &src)
 {
     std::cout << "Cure assignation operator Called" << std::endl;
-	(void)src;
+	if (this != &src)
+        m_isEquiped = src.m_isEquiped;
     return *this;
 }
 

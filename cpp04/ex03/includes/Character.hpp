@@ -26,6 +26,7 @@ class Character : public ICharacter
     protected:
         std::string m_name;
 		static std::vector<AMateria*> m_trash;
+        AMateria *m_inventory[4];
 
 };
 

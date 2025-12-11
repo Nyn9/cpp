@@ -26,12 +26,7 @@ Animal &Animal::operator=(Animal const &src)
 
 void Animal::makeSound() const
 {
-	if (m_type == "Dog")
-		std::cout << "Wouf wouf" << std::endl;
-	else if (m_type == "Cat")
-		std::cout << "Miaou" << std::endl;
-	else
-		std::cout << "No sound available" << std::endl;
+	std::cout << "No sound available" << std::endl;
 }
 
 std::string Animal::getType() const

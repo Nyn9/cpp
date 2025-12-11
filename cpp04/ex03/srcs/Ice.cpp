@@ -20,7 +20,8 @@ Ice::~Ice()
 Ice &Ice::operator=(Ice const &src)
 {
     std::cout << "Ice assignation operator Called" << std::endl;
-	(void)src;
+    if (this != &src)
+        m_isEquiped = src.m_isEquiped;
     return *this;
 }
 

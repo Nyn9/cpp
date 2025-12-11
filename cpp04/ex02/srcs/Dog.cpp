@@ -3,7 +3,7 @@
 Dog::Dog() : AAnimal()
 {
 	std::cout << "Dog constructor called" << std::endl;
-	this->m_type = "Dog";
+	m_type = "Dog";
 	m_brain = new Brain();
 }
 
@@ -23,7 +23,10 @@ Dog &Dog::operator=(Dog const &src)
 {
 	std::cout << "Dog assignation operator called" << std::endl;
 	if (this != &src)
+    {
+        m_brain = new Brain(*src.m_brain);
 		m_type = src.m_type;
+    }
 	return *this;
 }
 

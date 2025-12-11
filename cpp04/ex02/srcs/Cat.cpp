@@ -3,7 +3,7 @@
 Cat::Cat() : AAnimal()
 {
 	std::cout << "Cat constructor called" << std::endl;
-	this->m_type = "Cat";
+	m_type = "Cat";
 	m_brain = new Brain();
 }
 
@@ -23,7 +23,10 @@ Cat &Cat::operator=(Cat const &src)
 {
 	std::cout << "Cat assignation operator called" << std::endl;
 	if (this != &src)
+    {
+        m_brain = new Brain(*src.m_brain);
 		m_type = src.m_type;
+    }
 	return *this;
 }
 

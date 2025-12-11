@@ -17,7 +17,6 @@ class AAnimal
 		std::string getType() const;
 
     protected:
-
 		std::string m_type;
 };
 

@@ -19,6 +19,11 @@ int main()
 
     ICharacter* me = new Character("me");
 
+    Character basic;
+    {
+        Character tmp = basic;
+    }
+
 	std::cout << std::endl;
 
     AMateria* tmp;

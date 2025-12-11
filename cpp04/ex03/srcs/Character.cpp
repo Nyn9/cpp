@@ -79,7 +79,7 @@ void Character::equip(AMateria *m)
     {
         if (!m_inventory[i])
         {
-			m->setIsEquiped(1);
+			m->setIsEquiped(true);
             m_inventory[i] = m;
 
 			for (size_t j = 0; j < m_trash.size(); j++)
@@ -94,7 +94,7 @@ void Character::unequip(int idx)
 {
     if (idx >= 0 && idx < 4)
 	{
-		m_inventory[idx]->setIsEquiped(0);
+		m_inventory[idx]->setIsEquiped(false);
 		m_trash.push_back(m_inventory[idx]);
         m_inventory[idx] = NULL;
 	}

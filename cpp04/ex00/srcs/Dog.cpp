@@ -3,7 +3,7 @@
 Dog::Dog() : Animal()
 {
 	std::cout << "Dog constructor called" << std::endl;
-	this->m_type = "Dog";
+	m_type = "Dog";
 }
 
 Dog::Dog(const Dog &cp) : Animal(cp)
@@ -23,4 +23,9 @@ Dog &Dog::operator=(Dog const &src)
 	if (this != &src)
 		m_type = src.m_type;
 	return *this;
+}
+
+void Dog::makeSound() const
+{
+	std::cout << "Wouf !" << std::endl;
 }
